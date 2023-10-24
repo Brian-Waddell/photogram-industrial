@@ -54,7 +54,7 @@ task({ :sample_data => :environment }) do
 
       user.followers.each do |follower|
         if rand < 0.5
-          photo.fans << follower
+          photo.fans << follower unless photo.fans.include?(follower)
         end
 
         if rand < 0.25
