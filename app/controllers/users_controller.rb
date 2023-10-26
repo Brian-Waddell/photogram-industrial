@@ -4,6 +4,9 @@ class UsersController < ApplicationController
     @user = User.find_by!(username: params.fetch(:username))
 
   end 
-
+  
+  def liked
+    @user = User.find_by!(username: params.fetch(:username))
+  end
   
 end 
